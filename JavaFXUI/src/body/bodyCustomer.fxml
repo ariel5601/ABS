@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="customerTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1381.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="body.bodyCustomerController">
+  <tabs>
+    <Tab fx:id="infoTab" text="information">
+         <content>
+            <AnchorPane prefHeight="373.0" prefWidth="912.0">
+               <children>
+                  <fx:include fx:id="loansTakenTable" layoutX="26.0" layoutY="80.0" source="tables/customer/loansTakenTable.fxml" />
+                  <fx:include fx:id="loansGivenTable" layoutX="26.0" layoutY="320.0" source="tables/customer/loansGivenTable.fxml" />
+                  <Label layoutX="29.0" layoutY="291.0" text="loans gave:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="51.0" text="loans taken:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="886.0" layoutY="14.0" text="Balance:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="balanceLabel" layoutX="960.0" layoutY="14.0" prefHeight="27.0" prefWidth="94.0" text="amount">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addButton" layoutX="667.0" layoutY="10.0" mnemonicParsing="false" onAction="#addBalanceAction" prefHeight="63.0" prefWidth="172.0" text="choose amount to add" wrapText="true" />
+                  <Button fx:id="removeBalanceButton" layoutX="468.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeBalanceAction" prefHeight="63.0" prefWidth="173.0" text="choose amount to remove" wrapText="true" />
+                  <ListView fx:id="actionListView" layoutX="879.0" layoutY="71.0" prefHeight="468.0" prefWidth="397.0" />
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+    <Tab text="assign">
+         <content>
+            <fx:include fx:id="assignComponent" source="assign/assignComponent.fxml" />
+         </content>
+    </Tab>
+      <Tab text="payments">
+         <content>
+            <AnchorPane prefHeight="482.0" prefWidth="898.0">
+               <children>
+                  <fx:include fx:id="loansTakenTableInPayTab" layoutX="26.0" layoutY="40.0" source="tables/customer/loansTakenTable.fxml" />
+                  <fx:include fx:id="paymentsTable" layoutX="26.0" layoutY="270.0" source="tables/customer/paymentsTable.fxml" />
+                  <Label layoutX="28.0" layoutY="14.0" prefHeight="21.0" prefWidth="89.0" text="taken loans:" />
+                  <Label layoutX="28.0" layoutY="245.0" text="payments:" />
+                  <ListView fx:id="paymentsInfoList" layoutX="879.0" layoutY="71.0" prefHeight="468.0" prefWidth="397.0" />
+                  <Label layoutX="879.0" layoutY="44.0" prefHeight="21.0" prefWidth="99.0" text="payments info:" />
+                  <Button fx:id="returnButton" layoutX="342.0" layoutY="502.0" mnemonicParsing="false" onAction="#returnAction" prefHeight="65.0" prefWidth="205.0" text="return selected" wrapText="true" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

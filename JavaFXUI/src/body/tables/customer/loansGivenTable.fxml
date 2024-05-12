@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="givenLoansTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="845.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="body.tables.customer.loansGivenTableController">
+  <columns>
+    <TableColumn fx:id="idColumn" prefWidth="180.0" text="id" />
+    <TableColumn fx:id="categoryColumn" prefWidth="139.0" text="category" />
+      <TableColumn fx:id="amountColumn" prefWidth="75.0" text="amount" />
+      <TableColumn fx:id="interestColumn" prefWidth="75.0" text="interest" />
+      <TableColumn fx:id="timeBetweenEachPayColumn" prefWidth="171.0" text="time between each pay" />
+      <TableColumn fx:id="returnAmountColumn" prefWidth="129.0" text="return amount" />
+      <TableColumn fx:id="statusColumn" prefWidth="75.0" text="status" />
+  </columns>
+</TableView>

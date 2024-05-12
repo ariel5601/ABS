@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="body.tables.admin.infoSceneController">
+   <children>
+      <Label layoutX="21.0" layoutY="21.0" prefHeight="21.0" prefWidth="101.0" text="current status:" />
+      <Label fx:id="statusLabel" layoutX="122.0" layoutY="21.0" prefHeight="21.0" prefWidth="67.0" text="Label" />
+      <TextFlow fx:id="sceneTextFlow" layoutX="21.0" layoutY="42.0" prefHeight="300.0" prefWidth="522.0" />
+   </children>
+</AnchorPane>
